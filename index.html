@@ -11,8 +11,13 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
     <!--MAIN CSS-->
-    <link rel="stylesheet" href="Style/styles.css">
+    <link rel="stylesheet" href="Style/style.css">
     <title>Portfolio</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!--========== SCROLL TOP ==========-->
@@ -22,23 +27,15 @@
     
     <!--HEADER DESIGN-->
     <header class="header">
-        <div class="container">
-            <a href="#" class="logo">Portfolio</a>
-
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-
-                <div class="menu-icon" onclick="toggleMenu()">
-                    <i class="fas fa-bars menu-icon"></i>
-                </div>
-            </nav>
-        </div>
+        <a href="" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
     <!--HOME SECTION DESIGN-->
@@ -49,13 +46,13 @@
             <h3>And I'm a <span class="multiple-text"></span></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa pariatur debitis beatae illum inventore quisquam asperiores error, suscipit veniam! Labore dicta nulla culpa quam atque delectus quasi quis eius necessitatibus?</p>
             <div class="social-media">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/bulla1623"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/akashbulla"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/bulla_akash"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="https://www.instagram.com/bulla.akash_/"><i class="fa-brands fa-instagram"></i></a>
+
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="https://drive.google.com/file/d/1AoC9ZO-Oo3UEfU7wEXfgorvzj4mFq5C-/view?usp=drive_link" class="btn">Resume</a>
         </div>
 
         <div class="home-img">
