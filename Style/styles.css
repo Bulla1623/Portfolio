@@ -32,7 +32,6 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
-
 .header {
     position: fixed;
     top: 0;
@@ -44,6 +43,7 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    /* transition: var(--bg-color) 0.5s ease; */
 }
 
 .header.sticky {
@@ -57,21 +57,36 @@ section {
     cursor: default;
 }
 
-.navbar a {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 4rem;
+}
+
+.nav-links a {
     font-size: 1.5rem;
     color: var(--text-color);
-    margin-left: 4rem;
     font-weight: 700;
+    transition: color 0.3s ease;
 }
 
-.navbar:hover,
-.navbar a.active {
+.nav-links a:hover {
     color: var(--text-color);
 }
 
-#menu-icon {
+.menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
+    cursor: pointer;
     display: none;
 }
 
@@ -248,19 +263,27 @@ span {
 
 .portfolio-container .portfolio-box {
     position: relative;
+    width: 100%;
+    height: 100%;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    aspect-ratio: 1/1;
 }
 
 .portfolio-box img {
     width: 100%;
-    transition: .5s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
     opacity: 0.7;
 }
 
 .portfolio-box:hover {
+    transform: scale(1.1);
+}
+.portfolio-box:hover img {
     transform: scale(1.1);
 }
 
@@ -341,6 +364,11 @@ span {
     width: 49%;
 }
 
+.contact form .input-box#subject input[type="text"] {
+    width: 100%;
+}
+
+
 .contact form textarea {
     resize: none;
 }
@@ -383,7 +411,7 @@ span {
 }
 
 
-/*Breakpoitn*/
+/*Breakpoint*/
 
 @media(max-width: 1200px) {
     html {
@@ -418,11 +446,18 @@ span {
 }
 
 @media (max-width: 768px) {
-    #menu-icon {
+    .menu-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu-icon {
         display: block;
     }
 
     .navbar {
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
@@ -435,13 +470,21 @@ span {
     }
 
     .navbar.active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navbar a {
         display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1.5rem 0;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 3.6rem;
+        color: var(--text-color);
+        cursor: pointer;
     }
 
     .home {
@@ -484,6 +527,7 @@ span {
 
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: 1fr; */
     }
 }
 

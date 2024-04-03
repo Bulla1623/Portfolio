@@ -7,24 +7,38 @@
     <!--FONT-AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
     <!--MAIN CSS-->
     <link rel="stylesheet" href="Style/styles.css">
-    <title>Porfolio</title>
+    <title>Portfolio</title>
 </head>
 <body>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+    
     <!--HEADER DESIGN-->
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        
-        <i class="fa-solid fa-bars" id=""menu-icon"></i>
+        <div class="container">
+            <a href="#" class="logo">Portfolio</a>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars menu-icon"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!--HOME SECTION DESIGN-->
@@ -45,7 +59,7 @@
         </div>
 
         <div class="home-img">
-            <img src="img/profile.png" alt="main">
+            <img src="img/profiledp.png" alt="main">
         </div>
     </section>
 
@@ -96,7 +110,7 @@
         
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="img/1.jpeg" alt="">
+                <img src="img/1.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum impedit ipsum esse fugit molestias! Nam quidem neque tempora veniam omnis obcaecati commodi officia exercitationem. Quod numquam dicta excepturi mollitia ducimus.</p>
@@ -104,7 +118,7 @@
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="img/2.jpeg" alt="">
+                <img src="img/2.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum impedit ipsum esse fugit molestias! Nam quidem neque tempora veniam omnis obcaecati commodi officia exercitationem. Quod numquam dicta excepturi mollitia ducimus.</p>
@@ -112,7 +126,7 @@
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="img/3.jpeg" alt="">
+                <img src="img/3.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum impedit ipsum esse fugit molestias! Nam quidem neque tempora veniam omnis obcaecati commodi officia exercitationem. Quod numquam dicta excepturi mollitia ducimus.</p>
@@ -155,8 +169,7 @@
                 <input type="text" placeholder="Full Name">
                 <input type="email" placeholder="Email Address">
             </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
+            <div class="input-box" id="subject">
                 <input type="text" placeholder="Subject">
             </div>
             <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
@@ -175,13 +188,13 @@
         </div>
     </footer>
 
-    <!--scrool reveal-->
+    <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!--Typed Js-->
+    <!--========== TYPED JS ==========-->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <!--Main JS-->
+    <!--========== MAIN JS ==========-->
     <script src="JS/main.js"></script>
 </body>
 </html>
